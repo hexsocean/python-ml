@@ -1,0 +1,9 @@
+import urllib.request
+import zipfile
+
+url = 'https://storage.googleapis.com/kaggle-data-sets/44267/525696/compressed/crime-data-from-2010-to-present.csv.zip?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=gcp-kaggle-com%40kaggle-161607.iam.gserviceaccount.com%2F20220919%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20220919T164622Z&X-Goog-Expires=259200&X-Goog-SignedHeaders=host&X-Goog-Signature=809f8cd8b5cea0ed7a12ea8c751b20a1d72c067d1f43eb56a34114f158336a703adf971e6325be3c8773198f126e4e6da9eb55039b7ecc8c5f55aff2f58b0dc63e57cb350bbaee93c865e24e5fc8e8125580772d21a01233b87e1917a6c846c0762bb1f1ecf585a1c9f967317fae5320e555dac27219d2589904f6ce4e0ff8d28be57ed8f263123069e2622067467ccb4f5274da4c95b1f764ed876daf93730b8a717311bd685e8423e465178878e8ac6ef0afb62abccfc3e3fe1e0a569aa5e6dd80d364b37c9920eb7a6bd10732df0c028ced8eb4dc18d327316e2f9448ddd2668ec2391f47b620168a7f6636b79138df86fb17d2c3b30db48a780eab79adbe'
+extract_dir = "crimes"
+
+zip_path, _ = urllib.request.urlretrieve(url)
+with zipfile.ZipFile(zip_path, "r") as f:
+    f.extractall(extract_dir)
