@@ -2,7 +2,7 @@ import urllib.request
 import zipfile
 
 url = 'https://storage.googleapis.com/kaggle-data-sets/216167/477177/bundle/archive.zip?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=gcp-kaggle-com%40kaggle-161607.iam.gserviceaccount.com%2F20220921%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20220921T130152Z&X-Goog-Expires=259200&X-Goog-SignedHeaders=host&X-Goog-Signature=43f26a732b1cadc80d8ff2306e3d910c09d11a74f10842412477f058b0dcc3d10b427f01a0beb325212e32949213363285f0d0467330b428a40a7b053db9a263d7130586e2648f3a2af26ea18625b1e39b2369101e21230c67812f0b89394275f2ab57c0f28ac90495426d399b162796dad1188d741b8893050dd3dbaa89060703e502c674b95e015d4c34de043952f107961c1bce51d73e9aa04f9b474ac110a054e8ab7a15be8f0f4352afcfa6a08e8116f7fb845c6eb3ed65ebc08a31731c12a071ba412024029c34599dae9cdfe64b7d350e5b5bbe3e469660442a9b05f3faa67f2a02b1340cd959a7bc66fc77d20b3d14b1fa3c02d2fdbfd2c48ea34784'
-extract_dir = "crimes"
+extract_dir = "."
 
 zip_path, _ = urllib.request.urlretrieve(url)
 with zipfile.ZipFile(zip_path, "r") as f:
